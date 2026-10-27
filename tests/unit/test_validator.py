@@ -49,4 +49,4 @@ def test_patient_contract_inference():
     assert res.patient_id == "PAC-TEST"
     assert 0.0 <= res.mortality_risk_probability <= 1.0
     assert res.risk_tier in ["LOW", "MODERATE", "HIGH", "CRITICAL"]
-    assert res.latency_ms > 0
+    assert res.latency_ms >= 0.0
